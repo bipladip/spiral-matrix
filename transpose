@@ -1,0 +1,13 @@
+class Solution:
+    def transpose(self, mat):
+        rows = len(mat)
+        cols = len(mat[0])
+        
+        # Initialize result matrix with size cols x rows
+        result = [[0] * rows for _ in range(cols)]
+        
+        for i in range(rows):
+            for j in range(cols):
+                result[j][i] = mat[i][j]
+        
+        return result
